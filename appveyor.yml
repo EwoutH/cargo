@@ -1,10 +1,11 @@
 environment:
   matrix:
-  - TARGET: aarch64-pc-windows-msvc
   - TARGET: x86_64-pc-windows-msvc
     OTHER_TARGET: i686-pc-windows-msvc
   - TARGET: x86_64-pc-windows-msvc
     MINIMAL_VERSIONS: true
+    CFG_DISABLE_CROSS_TESTS: 1
+  - TARGET: aarch64-pc-windows-msvc
     CFG_DISABLE_CROSS_TESTS: 1
 
 install:
